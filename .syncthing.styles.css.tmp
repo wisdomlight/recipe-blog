@@ -1,0 +1,119 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+  
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+  
+    --brown-800: hsl(14, 45%, 36%);
+  
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+  }
+
+/* Variable Font (if you want to use it) */
+@font-face {
+  font-family: 'Outfit Variable';
+  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('woff2 supports variations'),
+       url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('woff-variations');
+  font-weight: 100 900; /* Specify the supported weight range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('../fonts/Young-serif/YoungSerif-Regular.ttf') format('truetype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: peachpuff; */
+}
+article {
+    position: relative;
+    border: 2px solid red;
+    padding: 25px;
+    /* background-color: red; */
+}
+article > .head:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.head {
+    /* padding-left: 30px; */
+    /* padding-right: 30px; */
+    position: relative;
+}
+/* .head { */
+    /* margin: -20px; learning - negative margin to compensate for the article padding causing the img not to fill the section element */
+/* } */
+.head img {
+    display: block;
+    width: 100%;;
+}
+.head h1, .head p, .head .preparation-time {
+    /* background-color: red; */
+    /* font-family: 'Young Serif', serif; */
+    font-family: 'Outfit';
+    font-family: 'Young-serif';
+    /* font-weight: 700; */
+    font-weight: 700;
+    /* padding-left: 25px; */
+    /* padding-right: 25px; */
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 1px solid orange;
+}
+.head h1 {
+    line-height: 1.1;
+    margin-top: 1.75rem;
+    color: var(--stone-900);
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 1.75rem;
+}
+.head p {
+    font-family: 'Young-Serif', sans-serif;
+    font-weight: 600;
+    margin-top: .75rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    font-size: .75rem;
+    color: var(--stone-600)
+}
+
+.preparation-time {
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--rose-50);
+}
+.preparation-time p {
+    color: var(--rose-800);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+
+    /* color: red; */
+    font-size: 1rem;
+    font-family: 'Outfit Variable';
+    font-family: 'Young-Serif', sans-serif;
+    font-weight: 900;
+    } 
+.preparation-time-list {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}
+.ingredients {
+    margin-top: 500px;
+}

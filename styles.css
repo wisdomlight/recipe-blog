@@ -12,108 +12,166 @@
     --rose-50: hsl(330, 100%, 98%);
   }
 
-/* Variable Font (if you want to use it) */
-@font-face {
-  font-family: 'Outfit Variable';
-  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('woff2 supports variations'),
-       url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('woff-variations');
-  font-weight: 100 900; /* Specify the supported weight range */
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Young Serif';
-  src: url('../fonts/Young-serif/YoungSerif-Regular.ttf') format('truetype');
-  font-weight: 400; /* Regular */
-  font-style: normal;
-}
+
+/* Variable Font (if you want to use it) */
+/* @font-face { */
+/*   font-family: 'Outfit Variable'; */
+/*   src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('woff2 supports variations'), */
+/*        url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('woff-variations'); */
+/*   font-weight: 100 900; /1* Specify the supported weight range *1/ */
+/*   font-style: normal; */
+/* } */
+
+/* @font-face { */
+/*   font-family: 'Young Serif'; */
+/*   src: url('../fonts/Young-serif/YoungSerif-Regular.ttf') format('truetype'); */
+/*   font-weight: 400; /1* Regular *1/ */
+/*   font-style: normal; */
+/* } */
 body {
     font-family: 'Outfit', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: peachpuff; */
 }
 article {
     position: relative;
-    border: 2px solid red;
-    padding: 25px;
-    /* background-color: red; */
-}
-article > .head:first-child {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-}
-.head {
-    /* padding-left: 30px; */
-    /* padding-right: 30px; */
-    position: relative;
+    /* border: 2px solid red; */
+    /* padding: 25px; */
 }
 /* .head { */
-    /* margin: -20px; learning - negative margin to compensate for the article padding causing the img not to fill the section element */
+/*     position: relative; */
 /* } */
 .head img {
     display: block;
-    width: 100%;;
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    margin-left: calc(50% - 50vw);
 }
 .head h1, .head p, .head .preparation-time {
-    /* background-color: red; */
-    /* font-family: 'Young Serif', serif; */
-    font-family: 'Outfit';
-    font-family: 'Young-serif';
-    /* font-weight: 700; */
+    font-family: 'Young Serif';
     font-weight: 700;
-    /* padding-left: 25px; */
-    /* padding-right: 25px; */
-    margin-left: 25px;
-    margin-right: 25px;
-    border: 1px solid orange;
+    margin-left: 30px;
+    margin-right: 30px;
+    /* border: 1px solid orange; */
 }
 .head h1 {
     line-height: 1.1;
-    margin-top: 1.75rem;
-    color: var(--stone-900);
+    margin-top: 2.3rem;
     margin-bottom: 0;
     padding: 0;
-    font-size: 1.75rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--stone-900);
 }
 .head p {
-    font-family: 'Young-Serif', sans-serif;
-    font-weight: 600;
+    font-family: 'Outfit';
+    font-weight: 400;
     margin-top: .75rem;
     margin-bottom: 1.5rem;
     padding: 0;
-    font-size: .75rem;
+    font-size: 1rem;
     color: var(--stone-600)
 }
 
-.preparation-time {
-    position: relative;
-    border-radius: 10px;
-    background-color: var(--rose-50);
+.head .preparation-time {
+	/* border: 1px solid green; */
+	width: 75%;
+	background-color: var(--rose-50);
+	border-radius: 12px;
+	margin: auto;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 .preparation-time p {
     color: var(--rose-800);
-    position: absolute;
-    top: -10px;
-    left: -10px;
-
-    /* color: red; */
-    font-size: 1rem;
-    font-family: 'Outfit Variable';
-    font-family: 'Young-Serif', sans-serif;
-    font-weight: 900;
+    font-size: 1.2rem;
+    font-weight: 700;
+    /* margin-top: 25px; */
+    margin-bottom: 0px;
+    margin-left: 25px;
     } 
-.preparation-time-list {
-    position: absolute;
-    top: 150px;
-    left: 20px;
+.preparation-times-list {
+    /* border: 1px solid red; */
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    /* padding-left: 0px; */
 }
-.ingredients {
-    margin-top: 500px;
+.preparation-times-list li{
+	margin-left: 4%;
+	width: 75%;
+	font-family: 'Outfit';
+	font-weight: 400;
+	color: var(--rose-800);
+	/* border: 1px solid green; */
+	text-align:  left;
+	padding-left: 20px;
+	}
+.prep-time, .instructions-head {
+	color: var(--stone-900);
+	font-family: 'Outfit';
+	font-weight: bold;
 }
+.li-text {
+	/* background-color: red ; */
+	color: var(--stone-600);
+}
+.heading {
+	font-family: 'Young Serif';
+	color: var(--brown-800);
+}
+.ingredients, .instructions, .nutrition {
+	width: 80%;
+	margin: auto;
+	padding-top: 12px;
+	padding-bottom: 14px;
+	border-bottom: 1px solid var(--stone-150);
+	color: var(--stone-600);
+	/* padding-left: 1.8rem; */
+}
+.ingredients li{
+	width: 78%;
+	/* border: 1px solid green; */
+	/* margin-left: 4%; */
+	margin-bottom: 8px;
+	padding-left: 20px;
+}
+
+
+.instructions ol li {
+	/* border: 1px solid green; */
+	margin-left: -15px;
+	margin-bottom: 12px;
+	padding-left: 25px;
+}
+.instructions ol li::marker {
+	color: var(--brown-800);
+	font-weight: bold;
+}
+table {
+	/* border: 1px solid green; */
+	margin: auto;
+	width: 80%;
+	/* border-collapse: separate; */ 
+	/* border-spacing: 0 20px; */
+}
+td {
+	border-bottom: 1px solid var(--stone-600);
+	margin-bottom: 5px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.col-2 {
+	color: var(--brown-800);
+	font-weight: 600;
+}
+/* Learning notes */
+/* .head { */
+    /* margin: -20px; learning - negative margin to compensate for the article padding causing the img not to fill the section element */
+/* } */
